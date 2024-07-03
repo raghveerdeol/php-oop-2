@@ -13,7 +13,7 @@ class prodotti {
 
     // metodi 
     /**
-     * Questa funzione mi restituiscce la variabile d'istanza nomeArticolo;
+     * Questa funzione restituiscce la variabile d'istanza nomeArticolo;
      *
      * @return void;
      */
@@ -21,7 +21,7 @@ class prodotti {
         $this->nomeArticolo;
     }
     /**
-     * Questa funzione mi permette di modificare la variabile d'istanza nomeArticolo;
+     * Questa funzione permette di modificare la variabile d'istanza nomeArticolo;
      *
      * @param [type] $nomeArticolo,
      * @return void;
@@ -30,7 +30,7 @@ class prodotti {
         $this->nomeArticolo = $nomeArticolo;
     }
     /**
-     * Questa funzione mi restituiscce la variabile d'istanza prezzo;
+     * Questa funzione restituiscce la variabile d'istanza prezzo;
      *
      * @return void;
      */
@@ -38,7 +38,7 @@ class prodotti {
         $this->prezzo;
     }
     /**
-     *  Questa funzione mi permette di modificare la variabile d'istanza prezzo;
+     *  Questa funzione permette di modificare la variabile d'istanza prezzo;
      *
      * @param $prezzo;
      * @return void;
