@@ -5,11 +5,13 @@ class Accessori extends Prodotti{
     // variabili d'istanza;
     private $materiali;
     private $dimenzioni;
+    private $categoria;
     // costruttore 
-    public function __construct($image, $nomeArticolo, $prezzo, $materiali, $dimenzioni){
+    public function __construct($image, $nomeArticolo, $prezzo, $materiali, $dimenzioni,$categoria){
         parent::__construct($image, $nomeArticolo, $prezzo);
         $this->materiali=$materiali;
         $this->dimenzioni=$dimenzioni;
+        $this->categoria=$categoria;
     }
 
     // metodi 
