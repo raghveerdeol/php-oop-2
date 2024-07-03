@@ -1,13 +1,13 @@
 
 <?php 
 
-class giochi extends prodotti{
+class Giochi extends Prodotti{
     // variabili d'istanza;
     private $caratteristiche;
     private $dimenzioni;
     // costruttore 
-    public function __construct($nomeArticolo, $prezzo, $caratteristiche, $dimenzioni){
-        parent::__construct($nomeArticolo, $prezzo);
+    public function __construct($image, $nomeArticolo, $prezzo, $caratteristiche, $dimenzioni){
+        parent::__construct($image, $nomeArticolo, $prezzo);
         $this->caratteristiche=$caratteristiche;
         $this->dimenzioni=$dimenzioni;
     }

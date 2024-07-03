@@ -1,12 +1,12 @@
 <?php 
 
-class cibo extends prodotti{
+class Cibo extends Prodotti{
     // variabili d'istanza;
     private $pesoNetto;
     private $ingredienti;
     // costruttore 
-    public function __construct($nomeArticolo, $prezzo, $pesoNetto, $ingredienti){
-        parent::__construct($nomeArticolo, $prezzo);
+    public function __construct($image, $nomeArticolo, $prezzo, $pesoNetto, $ingredienti){
+        parent::__construct($image, $nomeArticolo, $prezzo);
         $this->pesoNetto=$pesoNetto;
         $this->ingredienti=$ingredienti;
     }

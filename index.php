@@ -17,11 +17,14 @@
 // BONUS:
 // Definite una proprietà privata ed un metodo privato all'interno di una classe, assegnategli un valore e mostratelo nelle card (ricordatevi dell'esempio del codice prodotto visto a lezione).
 require_once __DIR__ . "/classi/Prodotti.php";
+require_once __DIR__ . "/classi/Categorie.php";
 require_once __DIR__ . "/classi/Cibo.php";
 require_once __DIR__ . "/classi/Accessori.php";
 require_once __DIR__ . "/classi/Giochi.php";
-$prodotto = new prodotti("palla", "2,40£");
+$prodotto = new Prodotti("","palla", "2,40£");
 var_dump($prodotto);
+$accessorio = new Accessori("","collana", "4.00$", "gomma", "L", new Categorie("cane"));
+var_dump($accessorio);
 
 ?>
 
@@ -30,7 +33,9 @@ var_dump($prodotto);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store</title>
+    <title>BoolShop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <main>

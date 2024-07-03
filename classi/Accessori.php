@@ -1,13 +1,13 @@
 
 <?php 
 
-class accessori extends prodotti{
+class Accessori extends Prodotti{
     // variabili d'istanza;
     private $materiali;
     private $dimenzioni;
     // costruttore 
-    public function __construct($nomeArticolo, $prezzo, $materiali, $dimenzioni){
-        parent::__construct($nomeArticolo, $prezzo);
+    public function __construct($image, $nomeArticolo, $prezzo, $materiali, $dimenzioni){
+        parent::__construct($image, $nomeArticolo, $prezzo);
         $this->materiali=$materiali;
         $this->dimenzioni=$dimenzioni;
     }

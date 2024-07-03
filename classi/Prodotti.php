@@ -1,17 +1,38 @@
 <?php 
 
-class prodotti {
+class Prodotti {
     // variabii d'istanza 
+    private $image;
     private $nomeArticolo;
     private $prezzo;
 
 
-    public function __construct($nomeArticolo, $prezzo){
+    public function __construct($image,$nomeArticolo, $prezzo){
+        $this->image=$image;
         $this->nomeArticolo=$nomeArticolo;
         $this->prezzo=$prezzo;
     }
 
     // metodi 
+
+    /**
+     * Questa funzione restituiscce la variabile d'istanza image;
+     *
+     * @return void
+     */
+    public function getImage(){
+        $this->image;
+    }
+
+    /**
+     * Questa funzione permette di modificare la variabile d'istanza image;
+     *
+     * @param $image
+     * @return void
+     */
+    public function setImage($image){
+        $this->image=$image;
+    }
     /**
      * Questa funzione restituiscce la variabile d'istanza nomeArticolo;
      *
