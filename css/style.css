@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 70%;
+    margin: 0 auto;
+}
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    line-height: 2.3rem;
+}
+.card{
+    width: calc((100% / 3) - 2rem);
+    padding: 1.3rem;
+    border: 1px solid black;
+}
+img{
+    width: 100%;
+}
