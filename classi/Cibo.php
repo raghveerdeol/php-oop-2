@@ -41,7 +41,7 @@ class cibo extends prodotti{
     }
 
     /**
-     * Questa funzione mi permette di modificare la variabile d'istanza ingredienti;
+     * Questa funzione permette di modificare la variabile d'istanza ingredienti;
      *
      * @param [type] $ingredienti
      * @return void
