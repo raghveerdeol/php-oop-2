@@ -48,14 +48,18 @@ $giochi = [$kong, $topini];
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <header>
+        <h1>Boolshop</h1>
+    </header>
     <main>
+        <h2>I nostri prodotti</h2>
         <div class="card-list">
             <!-- cibo  -->
             <?php foreach ($cibo as $key => $value) {?>
                 <div class="card">
                     <img src="<?php echo $value->getImage(); ?>" alt="immagine prodotto">
                     <section class="info">
-                        <h1><?php echo $value->getNomeArticolo() ;?></h1>
+                        <h3><?php echo $value->getNomeArticolo() ;?></h3>
                         <p>Prezzo: <?php echo $value->getPrezzo(); ?></p>
                         <p>Peso netto: <?php echo $value->getPesoNetto(); ?></p>
                         <p>Ingredineti: <?php echo $value->getIngredienti(); ?></p>
@@ -67,7 +71,7 @@ $giochi = [$kong, $topini];
                 <div class="card">
                     <img src="<?php echo $value->getImage(); ?>" alt="immagine prodotto">
                     <section class="info">
-                        <h1><?php echo $value->getNomeArticolo() ;?></h1>
+                        <h3><?php echo $value->getNomeArticolo() ;?></h3>
                         <p>Prezzo: <?php echo $value->getPrezzo(); ?></p>
                         <p>Peso netto: <?php echo $value->getMateriali(); ?></p>
                         <p>Ingredineti: <?php echo $value->getDimenzioni(); ?></p>
@@ -79,7 +83,7 @@ $giochi = [$kong, $topini];
                 <div class="card">
                     <img src="<?php echo $value->getImage(); ?>" alt="immagine prodotto">
                     <section class="info">
-                        <h1><?php echo $value->getNomeArticolo() ;?></h1>
+                        <h3><?php echo $value->getNomeArticolo() ;?></h3>
                         <p>Prezzo: <?php echo $value->getPrezzo(); ?></p>
                         <p>Peso netto: <?php echo $value->getCaratteristiche(); ?></p>
                         <p>Ingredineti: <?php echo $value->getDimenzioni(); ?></p>
