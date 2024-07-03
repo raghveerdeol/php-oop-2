@@ -1,18 +1,19 @@
 <?php 
 
-class Categorie {
+class Categoria {
     // variabili d'istanza;
-    private static $cane="cane";
-    private static $gatto="gatto";
-    private static $pesce="pesce";
-    private static $ucello="uccello";
-    // costruttore 
-    public function __construct($cattegoria){
-        if ($cattegoria == self::$cane) {
-            self::$cane;
-        }
+    private $nome;
+
+    public function __construct(string $nome){
+        $this->nome=$nome;
     }
 
-} 
+    public function getNome(){
+        $this->nome;
+    }
 
+    public function setNome($nome){
+        $this->nome=$nome;
+    }
+}
 ?>

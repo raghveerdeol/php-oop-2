@@ -5,13 +5,11 @@ class Accessori extends Prodotti{
     // variabili d'istanza;
     private $materiali;
     private $dimenzioni;
-    private $categoria;
     // costruttore 
-    public function __construct($image, $nomeArticolo, $prezzo, $materiali, $dimenzioni,$categoria){
-        parent::__construct($image, $nomeArticolo, $prezzo);
+    public function __construct($image, $nomeArticolo, $categoria, $prezzo, $materiali, $dimenzioni){
+        parent::__construct($image, $nomeArticolo, $categoria, $prezzo);
         $this->materiali=$materiali;
         $this->dimenzioni=$dimenzioni;
-        $this->categoria=$categoria;
     }
 
     // metodi 
@@ -21,7 +19,7 @@ class Accessori extends Prodotti{
      * @return void
      */
     public function getMateriali(){
-        $this->materiali;
+        return $this->materiali;
     }
 
     /**
@@ -31,7 +29,7 @@ class Accessori extends Prodotti{
      * @return void
      */
     public function setMateriali($materiali){
-        $this->materiali=$materiali;
+        return $this->materiali=$materiali;
     }
 
     /**
@@ -40,7 +38,7 @@ class Accessori extends Prodotti{
      * @return void
      */
     public function getDimenzioni(){
-        $this->dimenzioni;
+        return $this->dimenzioni;
     }
 
     /**
@@ -50,7 +48,7 @@ class Accessori extends Prodotti{
      * @return void
      */
     public function setDimenzioni($dimenzioni){
-        $this->dimenzioni=$dimenzioni;
+        return $this->dimenzioni=$dimenzioni;
     }
 }
 

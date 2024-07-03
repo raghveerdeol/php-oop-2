@@ -4,12 +4,14 @@ class Prodotti {
     // variabii d'istanza 
     private $image;
     private $nomeArticolo;
+    private $categoria;
     private $prezzo;
 
 
-    public function __construct($image,$nomeArticolo, $prezzo){
+    public function __construct($image,$nomeArticolo, Categoria $categoria, $prezzo){
         $this->image=$image;
         $this->nomeArticolo=$nomeArticolo;
+        $this->categoria=$categoria;
         $this->prezzo=$prezzo;
     }
 
@@ -21,7 +23,7 @@ class Prodotti {
      * @return void
      */
     public function getImage(){
-        $this->image;
+        return $this->image;
     }
 
     /**
@@ -31,7 +33,7 @@ class Prodotti {
      * @return void
      */
     public function setImage($image){
-        $this->image=$image;
+        return $this->image=$image;
     }
     /**
      * Questa funzione restituiscce la variabile d'istanza nomeArticolo;
@@ -39,7 +41,7 @@ class Prodotti {
      * @return void;
      */
     public function getNomeArticolo(){
-        $this->nomeArticolo;
+        return $this->nomeArticolo;
     }
     /**
      * Questa funzione permette di modificare la variabile d'istanza nomeArticolo;
@@ -48,7 +50,7 @@ class Prodotti {
      * @return void;
      */
     public function setNomeArticolo($nomeArticolo){
-        $this->nomeArticolo = $nomeArticolo;
+        return $this->nomeArticolo = $nomeArticolo;
     }
     /**
      * Questa funzione restituiscce la variabile d'istanza prezzo;
@@ -56,7 +58,7 @@ class Prodotti {
      * @return void;
      */
     public function getPrezzo(){
-        $this->prezzo;
+        return $this->prezzo;
     }
     /**
      *  Questa funzione permette di modificare la variabile d'istanza prezzo;
@@ -65,7 +67,7 @@ class Prodotti {
      * @return void;
      */
     public function setPrezzo($prezzo){
-        $this->prezzo = $prezzo;
+        return $this->prezzo = $prezzo;
     }
 }
 

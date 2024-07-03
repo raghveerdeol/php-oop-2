@@ -6,8 +6,8 @@ class Giochi extends Prodotti{
     private $caratteristiche;
     private $dimenzioni;
     // costruttore 
-    public function __construct($image, $nomeArticolo, $prezzo, $caratteristiche, $dimenzioni){
-        parent::__construct($image, $nomeArticolo, $prezzo);
+    public function __construct($image, $nomeArticolo, $categoria, $prezzo, $caratteristiche, $dimenzioni){
+        parent::__construct($image,  $nomeArticolo, $categoria, $prezzo);
         $this->caratteristiche=$caratteristiche;
         $this->dimenzioni=$dimenzioni;
     }
@@ -19,7 +19,7 @@ class Giochi extends Prodotti{
      * @return void
      */
     public function getCaratteristiche(){
-        $this->caratteristiche;
+        return $this->caratteristiche;
     }
 
     /**
@@ -29,7 +29,7 @@ class Giochi extends Prodotti{
      * @return void
      */
     public function setCaratteristiche($caratteristiche){
-        $this->caratteristiche=$caratteristiche;
+        return $this->caratteristiche=$caratteristiche;
     }
 
     /**
@@ -38,7 +38,7 @@ class Giochi extends Prodotti{
      * @return void
      */
     public function getDimenzioni(){
-        $this->dimenzioni;
+        return $this->dimenzioni;
     }
 
     /**
@@ -48,7 +48,7 @@ class Giochi extends Prodotti{
      * @return void
      */
     public function setDimenzioni($dimenzioni){
-        $this->dimenzioni=$dimenzioni;
+        return $this->dimenzioni=$dimenzioni;
     }
 }
 

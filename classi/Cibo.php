@@ -5,8 +5,8 @@ class Cibo extends Prodotti{
     private $pesoNetto;
     private $ingredienti;
     // costruttore 
-    public function __construct($image, $nomeArticolo, $prezzo, $pesoNetto, $ingredienti){
-        parent::__construct($image, $nomeArticolo, $prezzo);
+    public function __construct($image, $nomeArticolo, $categoria, $prezzo, $pesoNetto, $ingredienti){
+        parent::__construct($image,  $nomeArticolo, $categoria, $prezzo);
         $this->pesoNetto=$pesoNetto;
         $this->ingredienti=$ingredienti;
     }
@@ -18,7 +18,7 @@ class Cibo extends Prodotti{
      * @return void
      */
     public function getPesoNetto(){
-        $this->pesoNetto;
+        return $this->pesoNetto;
     }
 
     /**
@@ -28,7 +28,7 @@ class Cibo extends Prodotti{
      * @return void
      */
     public function setPesoNetto($pesoNetto){
-        $this->pesoNetto=$pesoNetto;
+        return $this->pesoNetto=$pesoNetto;
     }
 
     /**
@@ -37,7 +37,7 @@ class Cibo extends Prodotti{
      * @return void
      */
     public function getIngredienti(){
-        $this->ingredienti;
+        return $this->ingredienti;
     }
 
     /**
@@ -47,7 +47,7 @@ class Cibo extends Prodotti{
      * @return void
      */
     public function setIngredienti($ingredienti){
-        $this->ingredienti=$ingredienti;
+        return $this->ingredienti=$ingredienti;
     }
 }
 

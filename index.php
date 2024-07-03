@@ -21,9 +21,17 @@ require_once __DIR__ . "/classi/Categorie.php";
 require_once __DIR__ . "/classi/Cibo.php";
 require_once __DIR__ . "/classi/Accessori.php";
 require_once __DIR__ . "/classi/Giochi.php";
-$prodotto = new Prodotti("","palla", "2,40£");
-var_dump($prodotto);
-$accessorio = new Accessori("","collana", "4.00$", "gomma", "L", new Categorie("cane"));
+
+
+$royalCanin = new Cibo("https://arcaplanet.vtexassets.com/arquivos/ids/300306/Royal-Canin-Mini-Adult-Alimento-Completo-per-Cani-Adulti-di-Piccola-Taglia-10120604-1.jpg","Royal Canin Mini Adult",new Categoria("cane"),  "€43.99", "545g", "prosciutto, riso");
+$almoHolistic = new Cibo("https://arcaplanet.vtexassets.com/arquivos/ids/300514/Almo-Nature-Holistic-Maintenance-Medium-Large-Tonno-e-Riso-10118806.jpg","Almo Nature Holistic Maintenance Medium Large Tonno e Riso",new Categoria("cane"),  "€44,99", "600g", "manzo, cereali");
+$almoCat = new Cibo("https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg","Almo Nature Cat Daily Lattina",new Categoria("Gatto"),  "€34,99", "400g", "tonno, pollo, prosciutto");
+$mangimePesci = new Cibo("https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg","Mangime per Pesci Guppy in Fiocchi",new Categoria("pesce"),  "€2,95", "30g", "Pesci e sottoprodotti dei pesci, Cereali, Lievito, Alghes");
+$voliera = new Accessori("https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg","Voliera Wilma in Legnoa",new Categoria("Uccello"),  "€184,99", "Legno", "M: L 83 x P 67 x H 153 cm");
+$cartucce = new Accessori("https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg","Cartucce Filtranti per Filtro EasyCrystal",new Categoria("Pesce"),  "€2,29", "Materiale espanso", "ND");
+$kong = new Giochi("https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg","Kong Classic",new Categoria("cane"),  "€13,49", "Galleggia e rimbalza", "8,5 cm x 10 cm");
+$topini = new Giochi("https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg","Topini di peluche Trixie",new Categoria("Gatto"),  "€4.99", "Morbido con codina in corda", "8,5 cm x 10 cm");
+
 var_dump($accessorio);
 
 ?>
@@ -39,7 +47,11 @@ var_dump($accessorio);
 </head>
 <body>
     <main>
-
+        <ul>
+            <li>
+                
+            </li>
+        </ul>
     </main>
 </body>
 </html>
