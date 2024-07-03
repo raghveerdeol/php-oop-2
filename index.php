@@ -25,17 +25,16 @@ require_once __DIR__ . "/classi/Giochi.php";
 
 $royalCanin = new Cibo("https://arcaplanet.vtexassets.com/arquivos/ids/300306/Royal-Canin-Mini-Adult-Alimento-Completo-per-Cani-Adulti-di-Piccola-Taglia-10120604-1.jpg","Royal Canin Mini Adult",new Categoria("cane"),  "€43.99", "545g", "prosciutto, riso");
 $almoHolistic = new Cibo("https://arcaplanet.vtexassets.com/arquivos/ids/300514/Almo-Nature-Holistic-Maintenance-Medium-Large-Tonno-e-Riso-10118806.jpg","Almo Nature Holistic Maintenance Medium Large Tonno e Riso",new Categoria("cane"),  "€44,99", "600g", "manzo, cereali");
-$almoCat = new Cibo("https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg","Almo Nature Cat Daily Lattina",new Categoria("Gatto"),  "€34,99", "400g", "tonno, pollo, prosciutto");
+$almoCat = new Cibo("https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg","Almo Nature Cat Daily Lattina",new Categoria("gatto"),  "€34,99", "400g", "tonno, pollo, prosciutto");
 $mangimePesci = new Cibo("https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg","Mangime per Pesci Guppy in Fiocchi",new Categoria("pesce"),  "€2,95", "30g", "Pesci e sottoprodotti dei pesci, Cereali, Lievito, Alghes");
-$voliera = new Accessori("https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg","Voliera Wilma in Legnoa",new Categoria("Uccello"),  "€184,99", "Legno", "M: L 83 x P 67 x H 153 cm");
-$cartucce = new Accessori("https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg","Cartucce Filtranti per Filtro EasyCrystal",new Categoria("Pesce"),  "€2,29", "Materiale espanso", "ND");
+$voliera = new Accessori("https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg","Voliera Wilma in Legnoa",new Categoria("uccello"),  "€184,99", "Legno", "M: L 83 x P 67 x H 153 cm");
+$cartucce = new Accessori("https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg","Cartucce Filtranti per Filtro EasyCrystal",new Categoria("pesce"),  "€2,29", "Materiale espanso", "ND");
 $kong = new Giochi("https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg","Kong Classic",new Categoria("cane"),  "€13,49", "Galleggia e rimbalza", "8,5 cm x 10 cm");
-$topini = new Giochi("https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg","Topini di peluche Trixie",new Categoria("Gatto"),  "€4.99", "Morbido con codina in corda", "8,5 cm x 10 cm");
+$topini = new Giochi("https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg","Topini di peluche Trixie",new Categoria("gatto"),  "€4.99", "Morbido con codina in corda", "8,5 cm x 10 cm");
 
 $cibo = [$royalCanin, $almoHolistic, $almoCat, $mangimePesci];
 $accessori = [$voliera, $cartucce];
 $giochi = [$kong, $topini];
-
 ?>
 
 <!DOCTYPE html>
@@ -60,9 +59,11 @@ $giochi = [$kong, $topini];
                     <img src="<?php echo $value->getImage(); ?>" alt="immagine prodotto">
                     <section class="info">
                         <h3><?php echo $value->getNomeArticolo() ;?></h3>
+                        <p><?php echo $value->getIcon($value->getCategoria()->nome) ?> <?php echo $value->getCategoria()->nome ; ?></p>
                         <p>Prezzo: <?php echo $value->getPrezzo(); ?></p>
                         <p>Peso netto: <?php echo $value->getPesoNetto(); ?></p>
                         <p>Ingredineti: <?php echo $value->getIngredienti(); ?></p>
+                        <p>Tipologia: <?php echo $value->getTipologia(); ?></p>
                     </section>
                 </div>
             <?php } ?>
@@ -72,9 +73,11 @@ $giochi = [$kong, $topini];
                     <img src="<?php echo $value->getImage(); ?>" alt="immagine prodotto">
                     <section class="info">
                         <h3><?php echo $value->getNomeArticolo() ;?></h3>
+                        <p><?php echo $value->getIcon($value->getCategoria()->nome) ?> <?php echo $value->getCategoria()->nome ; ?></p>
                         <p>Prezzo: <?php echo $value->getPrezzo(); ?></p>
                         <p>Peso netto: <?php echo $value->getMateriali(); ?></p>
                         <p>Ingredineti: <?php echo $value->getDimenzioni(); ?></p>
+                        <p>Tipologia: <?php echo $value->getTipologia(); ?></p>
                     </section>
                 </div>
             <?php } ?>
@@ -84,9 +87,11 @@ $giochi = [$kong, $topini];
                     <img src="<?php echo $value->getImage(); ?>" alt="immagine prodotto">
                     <section class="info">
                         <h3><?php echo $value->getNomeArticolo() ;?></h3>
+                        <p><?php echo $value->getIcon($value->getCategoria()->nome) ?> <?php echo $value->getCategoria()->nome ; ?></p>
                         <p>Prezzo: <?php echo $value->getPrezzo(); ?></p>
                         <p>Peso netto: <?php echo $value->getCaratteristiche(); ?></p>
                         <p>Ingredineti: <?php echo $value->getDimenzioni(); ?></p>
+                        <p>Tipologia: <?php echo $value->getTipologia(); ?></p>
                     </section>
                 </div>
             <?php } ?>

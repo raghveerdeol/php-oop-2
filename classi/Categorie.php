@@ -2,7 +2,7 @@
 
 class Categoria {
     // variabili d'istanza;
-    private $nome;
+    public $nome;
 
     public function __construct(string $nome){
         $this->nome=$nome;

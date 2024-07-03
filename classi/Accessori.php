@@ -5,6 +5,8 @@ class Accessori extends Prodotti{
     // variabili d'istanza;
     private $materiali;
     private $dimenzioni;
+    private static $tipologia = "accessori";
+
     // costruttore 
     public function __construct($image, $nomeArticolo, $categoria, $prezzo, $materiali, $dimenzioni){
         parent::__construct($image, $nomeArticolo, $categoria, $prezzo);
@@ -13,6 +15,9 @@ class Accessori extends Prodotti{
     }
 
     // metodi 
+    public function getTipologia(){
+        return self::$tipologia;
+    }
     /**
      * Questa funzione restituiscce la variabile d'istanza materiali;
      *

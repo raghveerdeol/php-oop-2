@@ -5,6 +5,7 @@ class Giochi extends Prodotti{
     // variabili d'istanza;
     private $caratteristiche;
     private $dimenzioni;
+    private static $tipologia = "giochi";
     // costruttore 
     public function __construct($image, $nomeArticolo, $categoria, $prezzo, $caratteristiche, $dimenzioni){
         parent::__construct($image,  $nomeArticolo, $categoria, $prezzo);
@@ -13,6 +14,9 @@ class Giochi extends Prodotti{
     }
 
     // metodi 
+    public function getTipologia(){
+        return self::$tipologia;
+    }
     /**
      * Questa funzione restituiscce la variabile d'istanza caratteristiche;
      *

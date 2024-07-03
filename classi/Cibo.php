@@ -4,6 +4,7 @@ class Cibo extends Prodotti{
     // variabili d'istanza;
     private $pesoNetto;
     private $ingredienti;
+    private static $tipologia = "cibo";
     // costruttore 
     public function __construct($image, $nomeArticolo, $categoria, $prezzo, $pesoNetto, $ingredienti){
         parent::__construct($image,  $nomeArticolo, $categoria, $prezzo);
@@ -12,6 +13,11 @@ class Cibo extends Prodotti{
     }
 
     // metodi 
+
+
+    public function getTipologia(){
+        return self::$tipologia;
+    }
     /**
      * Questa funzione restituiscce la variabile d'istanza pesoNetto;
      *
