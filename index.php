@@ -40,10 +40,7 @@ $cartucce = new Accessori("https://arcaplanet.vtexassets.com/arquivos/ids/272741
 $kong = new Giochi("https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg","Kong Classic",$cane,  "€13,49", "Galleggia e rimbalza", "8,5 cm x 10 cm"),
 $topini = new Giochi("https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg","Topini di peluche Trixie",$gatto,  "€4.99", "Morbido con codina in corda", "8,5 cm x 10 cm"),
 ];
-var_dump($prodotti);
-$cibo = [$royalCanin, $almoHolistic, $almoCat, $mangimePesci];
-$accessori = [$voliera, $cartucce];
-$giochi = [$kong, $topini];
+
 ?>
 
 <!DOCTYPE html>
@@ -69,38 +66,21 @@ $giochi = [$kong, $topini];
                     <section class="info">
                         <h3><?php echo $value->getNomeArticolo() ;?></h3>
                         <p><?php echo $value->getIcon($value->getCategoria()->nome) ?> <?php echo $value->getCategoria()->nome; ?></p>
-                        <p>Prezzo: <?php echo $value->getPrezzo(); ?></p>
-                        <p>Peso netto: <?php echo $value->getPesoNetto(); ?></p>
-                        <p>Ingredineti: <?php echo $value->getIngredienti(); ?></p>
                         <p>Tipologia: <?php echo $value->getTipologia(); ?></p>
-                    </section>
-                </div>
-            <?php } ?>
-            <!-- accessori  -->
-            <?php foreach ($accessori as $key => $value) {?>
-                <div class="card">
-                    <img src="<?php echo $value->getImage(); ?>" alt="immagine prodotto">
-                    <section class="info">
-                        <h3><?php echo $value->getNomeArticolo() ;?></h3>
-                        <p><?php echo $value->getIcon($value->getCategoria()->nome) ?> <?php echo $value->getCategoria()->nome ; ?></p>
                         <p>Prezzo: <?php echo $value->getPrezzo(); ?></p>
-                        <p>Peso netto: <?php echo $value->getMateriali(); ?></p>
-                        <p>Ingredineti: <?php echo $value->getDimenzioni(); ?></p>
-                        <p>Tipologia: <?php echo $value->getTipologia(); ?></p>
-                    </section>
-                </div>
-            <?php } ?>
-            <!-- giochi  -->
-            <?php foreach ($giochi as $key => $value) {?>
-                <div class="card">
-                    <img src="<?php echo $value->getImage(); ?>" alt="immagine prodotto">
-                    <section class="info">
-                        <h3><?php echo $value->getNomeArticolo() ;?></h3>
-                        <p><?php echo $value->getIcon($value->getCategoria()->nome) ?> <?php echo $value->getCategoria()->nome ; ?></p>
-                        <p>Prezzo: <?php echo $value->getPrezzo(); ?></p>
-                        <p>Peso netto: <?php echo $value->getCaratteristiche(); ?></p>
-                        <p>Ingredineti: <?php echo $value->getDimenzioni(); ?></p>
-                        <p>Tipologia: <?php echo $value->getTipologia(); ?></p>
+                        <!-- cibo  -->
+                        <?php if (get_class($value) === "Cibo") {?>
+                            <p>Peso netto: <?php echo $value->getPesoNetto(); ?></p>
+                            <p>Ingredineti: <?php echo $value->getIngredienti(); ?></p>
+                        <?php } elseif (get_class($value) === "Accessori") {?>
+                            <!-- accessori  -->
+                            <p>Dimenzioni: <?php echo $value->getDimenzioni(); ?></p>
+                            <p>Materiale: <?php echo $value->getMateriali(); ?></p>
+                        <?php } elseif (get_class($value) === "Giochi") {?>
+                            <!-- giochi  -->
+                            <p>Dimenzioni: <?php echo $value->getDimenzioni(); ?></p>
+                            <p>Caratteristiche: <?php echo $value->getCaratteristiche(); ?></p>
+                        <?php } ?>
                     </section>
                 </div>
             <?php } ?>
