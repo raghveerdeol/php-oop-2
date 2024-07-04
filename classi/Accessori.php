@@ -1,10 +1,10 @@
-
 <?php 
+require_once __DIR__ . "/traits/hasSize.php";
 
 class Accessori extends Prodotti{
     // variabili d'istanza;
+    use dimenzioni;
     private $materiali;
-    private $dimenzioni;
     private static $tipologia = "accessori";
 
     // costruttore 
@@ -37,24 +37,7 @@ class Accessori extends Prodotti{
         return $this->materiali=$materiali;
     }
 
-    /**
-     * Questa funzione restituiscce la variabile d'istanza dimenzioni;
-     *
-     * @return void
-     */
-    public function getDimenzioni(){
-        return $this->dimenzioni;
-    }
 
-    /**
-     * Questa funzione permette di modificare la variabile d'istanza dimenzioni;
-     *
-     * @param $dimenzioni
-     * @return void
-     */
-    public function setDimenzioni($dimenzioni){
-        return $this->dimenzioni=$dimenzioni;
-    }
 }
 
 ?>

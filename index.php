@@ -21,6 +21,7 @@ require_once __DIR__ . "/classi/Categorie.php";
 require_once __DIR__ . "/classi/Cibo.php";
 require_once __DIR__ . "/classi/Accessori.php";
 require_once __DIR__ . "/classi/Giochi.php";
+require_once __DIR__ . "/classi/traits/hasSize.php";
 
 $categorie=[
     $cane= new Categoria("cane"),

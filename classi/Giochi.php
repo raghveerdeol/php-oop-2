@@ -1,10 +1,11 @@
 
 <?php 
+require_once __DIR__ . "/traits/hasSize.php";
 
 class Giochi extends Prodotti{
     // variabili d'istanza;
+    use dimenzioni;
     private $caratteristiche;
-    private $dimenzioni;
     private static $tipologia = "giochi";
     // costruttore 
     public function __construct($image, $nomeArticolo, $categoria, $prezzo, $caratteristiche, $dimenzioni){
@@ -34,25 +35,6 @@ class Giochi extends Prodotti{
      */
     public function setCaratteristiche($caratteristiche){
         return $this->caratteristiche=$caratteristiche;
-    }
-
-    /**
-     * Questa funzione restituiscce la variabile d'istanza dimenzioni;
-     *
-     * @return void
-     */
-    public function getDimenzioni(){
-        return $this->dimenzioni;
-    }
-
-    /**
-     * Questa funzione permette di modificare la variabile d'istanza dimenzioni;
-     *
-     * @param [type] $dimenzioni
-     * @return void
-     */
-    public function setDimenzioni($dimenzioni){
-        return $this->dimenzioni=$dimenzioni;
     }
 }
 
